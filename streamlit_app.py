@@ -60,8 +60,8 @@ if streamlit.button("Get Fruit Load List"):
 
 # streamlit.stop()
 
+new_fruit = streamlit.text_input('What fruit would you like add?')
 if streamlit.button("Add a Fruit to the List"):
-  new_fruit = streamlit.text_input('What fruit would you like add?')
   insert_res = add_fruit_sf(my_cnx, new_fruit)
   if insert_res[0][0] == 1:
     streamlit.write('Thanks for adding', new_fruit)
